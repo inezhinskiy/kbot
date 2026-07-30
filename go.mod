@@ -1,4 +1,4 @@
-module github.com/pikajevv/kbot
+module github.com/inezhinskiy/kbot
 
 go 1.26.1
 
