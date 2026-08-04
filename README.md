@@ -27,7 +27,7 @@ make build
 ./kbot start
 ```
 
-5. Push the application
+5. Push image 
 ```bash
 make push
 ```
