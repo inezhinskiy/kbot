@@ -19,13 +19,18 @@ export TELE_TOKEN="your_telegram_bot_token"
 
 3. Build the application:
 ```bash
-go build
+make build
 ```
 
 4. Run the application:
 ```bash
 ./kbot start
 ```
+
+5. Push the application
+```bash
+make push
+
 
 ## Usage 
 
