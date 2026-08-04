@@ -30,7 +30,7 @@ make build
 5. Push the application
 ```bash
 make push
-
+```
 
 ## Usage 
 
