@@ -1,5 +1,5 @@
 APP=$(shell basename -s .git $(shell git remote get-url origin))
-REGISTRY=inezhinskiy
+REGISTRY=ghcr.io/inezhinskiy
 VERSION=$(shell git describe --tags --abbrev=0)-$(shell git rev-parse --short HEAD)
 TARGETOS=linux #linux darwin windows
 TARGETARCH=amd64 #arm64 amd64
