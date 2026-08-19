@@ -35,3 +35,21 @@ make push
 ## Usage 
 
     /start hello
+
+
+## CI/CD Pipeline
+
+```mermaid
+flowchart TD
+    A[Developer] -->|git push to develop| B[GitHub Repository]
+    B --> C[GitHub Actions: CI job]
+    C -->|go build, go test| D[Docker build]
+    D -->|docker push| E[ghcr.io/inezhinskiy/kbot]
+    C -->|on success| F[GitHub Actions: CD job]
+    F -->|yq: update image.tag| G[helm/values.yaml]
+    G -->|git commit and push| B
+    B -.->|watches develop branch| H[ArgoCD]
+    H -->|auto-sync| I[Kubernetes Cluster]
+    E -.->|image pull| I
+    I --> J[kbot Pod running]
+```
